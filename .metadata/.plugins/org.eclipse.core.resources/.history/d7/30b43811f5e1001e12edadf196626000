@@ -1,0 +1,26 @@
+<%@ page import="java.io.IOException" %>
+<%@ page import="javax.servlet.ServletException" %>
+<%@ page import="javax.servlet.http.HttpServlet" %>
+<%@ page import="javax.servlet.http.HttpServletRequest" %>
+<%@ page import="javax.servlet.http.HttpServletResponse" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    // Assuming this data is retrieved from a database
+    String username = "john_doe";
+    String email = "john@example.com";
+    
+    // Set attributes in request scope
+    request.setAttribute("username", username);
+    request.setAttribute("email", email);
+%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Information</title>
+</head>
+<body>
+    <h2>User Information</h2>
+    <p>Username: <%= request.getAttribute("username") %></p>
+    <p>Email: <%= request.getAttribute("email") %></p>
+</body>
+</html>

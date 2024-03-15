@@ -1,0 +1,17 @@
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:01:40 +0530] "GET /Web-development/10print.jsp HTTP/1.1" 500 2465
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:02:10 +0530] "GET /Web-development/10print.jsp HTTP/1.1" 200 318
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:07:47 +0530] "GET /Web-development/get_data.jsp HTTP/1.1" 200 251
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:07:49 +0530] "GET /Web-development/product.jsp?pid=333 HTTP/1.1" 200 131
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:07:51 +0530] "GET /Web-development/product.jsp?pid=666 HTTP/1.1" 200 131
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:07:53 +0530] "GET /Web-development/product.jsp?pid=222 HTTP/1.1" 200 131
+127.0.0.1 - - [12/Mar/2024:11:47:31 +0530] "GET / HTTP/1.1" 404 998
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:47:32 +0530] "GET /Web-development/form_get.jsp HTTP/1.1" 200 415
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:47:34 +0530] "GET /Web-development/product.jsp?pid=333 HTTP/1.1" 200 131
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:47:37 +0530] "GET /Web-development/product.jsp?pid=666 HTTP/1.1" 200 131
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:47:42 +0530] "GET /Web-development/product.jsp?pid=666 HTTP/1.1" 200 131
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:47:44 +0530] "GET /Web-development/product.jsp?pid=333 HTTP/1.1" 200 131
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:59:44 +0530] "GET /Web-development/add.jsp HTTP/1.1" 200 276
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:11:59:50 +0530] "GET /Web-development/add_two.jsp?f=5&s=7 HTTP/1.1" 200 130
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:12:00:03 +0530] "GET /Web-development/add_two.jsp?f=58&s=7 HTTP/1.1" 200 130
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:12:00:55 +0530] "GET /Web-development/add.jsp HTTP/1.1" 200 279
+0:0:0:0:0:0:0:1 - - [12/Mar/2024:12:00:59 +0530] "GET /Web-development/result_add.jsp?f=77&s=99 HTTP/1.1" 200 131

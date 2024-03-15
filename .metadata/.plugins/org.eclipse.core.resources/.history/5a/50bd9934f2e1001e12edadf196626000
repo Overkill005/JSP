@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PageScope Example</title>
+</head>
+<body>
+    <% 
+        // Setting an attribute in the PageScope
+        pageContext.setAttribute("message", "Hello, PageScope!");
+    %>
+    
+    <h1>PageScope Example</h1>
+    
+    <h1<%= pageContext.getAttribute("message") %></p>
+    
+    <% 
+        // Removing the attribute from PageScope
+        pageContext.removeAttribute("message");
+    %>
+    
+    <p>Message after removal: <%= pageContext.getAttribute("message") %></p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+127.0.0.1 - - [11/Mar/2024:12:31:38 +0530] "GET / HTTP/1.1" 404 998
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:12:31:38 +0530] "GET /Web-development/index.jsp HTTP/1.1" 200 135
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:12:32:43 +0530] "GET /Web-development/index.jsp HTTP/1.1" 200 135
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:12:47:14 +0530] "GET /jsp/addition.jsp HTTP/1.1" 404 1030
+127.0.0.1 - - [11/Mar/2024:12:52:03 +0530] "GET / HTTP/1.1" 404 998
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:12:52:08 +0530] "GET /Web-development/index.jsp HTTP/1.1" 200 135
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:12:52:08 +0530] "GET /Web-development/index.jsp HTTP/1.1" 200 135
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:12:52:09 +0530] "GET /Web-development/index.jsp HTTP/1.1" 200 135
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:12:52:17 +0530] "GET /Web-development/index.jsp HTTP/1.1" 200 135
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:12:52:25 +0530] "GET /Web-development/index.jsp HTTP/1.1" 200 138
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:12:52:57 +0530] "GET /Web-development/index.jsp HTTP/1.1" 200 138
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:12:52:59 +0530] "GET /Web-development/index.jsp HTTP/1.1" 200 138
+0:0:0:0:0:0:0:1 - - [11/Mar/2024:12:53:02 +0530] "GET /Web-development/index.jsp HTTP/1.1" 200 133
