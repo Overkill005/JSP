@@ -1,0 +1,35 @@
+public class ProductDetails {
+	private int prodId;
+	private double prodRate;
+	private int prodQty;
+
+	public ProductDetails(int prodId, double prodRate, int prodQty) {
+		this.prodId = prodId;
+		this.prodRate = prodRate;
+		this.prodQty = prodQty;
+	}
+
+	public int getProdId() {
+		return prodId;
+	}
+
+	public void setProdId(int prodId) {
+		this.prodId = prodId;
+	}
+
+	public double getProdRate() {
+		return prodRate;
+	}
+
+	public void setProdRate(double prodRate) {
+		this.prodRate = prodRate;
+	}
+
+	public int getProdQty() {
+		return prodQty;
+	}
+
+	public void setProdQty(int prodQty) {
+		this.prodQty = prodQty;
+	}
+}

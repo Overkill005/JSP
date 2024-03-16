@@ -1,0 +1,72 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/OrderServlet")
+public class OrderServlet extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final String jdbcURL = "jdbc:mysql://localhost:3306/your_database_name";
+	private final String jdbcUsername = "your_username";
+	private final String jdbcPassword = "your_password";
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+
+		String prodName = request.getParameter("prodName");
+		double prodRate = Double.parseDouble(request.getParameter("prodRate"));
+		int orderQty = Integer.parseInt(request.getParameter("orderQty"));
+		double orderValue = prodRate * orderQty;
+
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
+			String sql = "INSERT INTO Order_Master (ProdID, ProdRate, OrderQty, OrderValue) VALUES ((SELECT ProdID FROM Product_Master WHERE ProdName=?), ?, ?, ?)";
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setString(1, prodName);
+			preparedStatement.setDouble(2, prodRate);
+			preparedStatement.setInt(3, orderQty);
+			preparedStatement.setDouble(4, orderValue);
+			int rowsAffected = preparedStatement.executeUpdate();
+
+			if (rowsAffected > 0) {
+				out.println("<h3>Order Placed Successfully!</h3>");
+				out.println("<p>Product Name: " + prodName + "</p>");
+				out.println("<p>Product Rate: " + prodRate + "</p>");
+				out.println("<p>Order Quantity: " + orderQty + "</p>");
+				out.println("<p>Order Value: " + orderValue + "</p>");
+			} else {
+				out.println("<h3>Error placing order!</h3>");
+			}
+		} catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (preparedStatement != null) {
+					preparedStatement.close();
+				}
+				if (connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

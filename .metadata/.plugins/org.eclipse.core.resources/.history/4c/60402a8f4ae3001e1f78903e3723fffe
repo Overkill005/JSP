@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Form</title>
+    <style>
+        /* CSS styles */
+    </style>
+</head>
+<body>
+    <h2>Order Form</h2>
+    <form id="orderForm" action="order" method="post">
+        <label for="productName">Product Name:</label>
+        <select id="productName" name="productName"></select><br>
+        Quantity: <input type="number" id="quantity" name="quantity"><br>
+        <input type="submit" value="Order">
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fetch product names from the database and populate the dropdown
+            $.ajax({
+                type: 'GET',
+                url: 'FetchProductNamesServlet',
+                success: function(data) {
+                    var productNames = JSON.parse(data);
+                    var options = '';
+                    for (var i = 0; i < productNames.length; i++) {
+                        options += '<option value="' + productNames[i] + '">' + productNames[i] + '</option>';
+                    }
+                    $('#productName').html(options);
+                }
+            });
+
+            // On form submission
+            $('#orderForm').submit(function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                var productName = $('#productName').val();
+                var quantity = $('#quantity').val();
+
+                // Fetch product details using AJAX
+                $.ajax({
+                    type: 'POST',
+                    url: 'FetchProductDetailsServlet',
+                    data: { productName: productName },
+                    success: function(data) {
+                        var productDetails = JSON.parse(data);
+
+                        if (quantity <= productDetails.prodQty) {
+                            // Proceed with order submission
+                            $.ajax({
+                                type: 'POST',
+                                url: 'OrderServlet',
+                                data: {
+                                    productName: productName,
+                                    prodId: productDetails.prodId,
+                                    prodRate: productDetails.prodRate,
+                                    quantity: quantity
+                                },
+                                success: function(response) {
+                                    alert(response); // Show success message
+                                    // You can redirect to a success page or perform any other action as needed
+                                }
+                            });
+                        } else {
+                            alert("Error: Quantity exceeds available quantity for " + productName);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
