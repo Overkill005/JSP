@@ -1,0 +1,17 @@
+127.0.0.1 - - [16/Mar/2024:20:38:28 +0530] "GET / HTTP/1.1" 404 998
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:38:34 +0530] "GET /Book-order/home.jsp HTTP/1.1" 200 820
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:38:34 +0530] "GET /Book-order/js/jQuery.js HTTP/1.1" 200 87546
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:38:34 +0530] "GET /favicon.ico HTTP/1.1" 404 1020
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:38:47 +0530] "POST /Book-order/getproduct HTTP/1.1" 200 159
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:38:54 +0530] "POST /Book-order/getproduct HTTP/1.1" 200 159
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:39:06 +0530] "POST /Book-order/getproduct HTTP/1.1" 200 159
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:39:07 +0530] "GET /Book-order/home.jsp HTTP/1.1" 200 820
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:39:08 +0530] "GET /Book-order/js/jQuery.js HTTP/1.1" 200 87546
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:39:12 +0530] "POST /Book-order/getproduct HTTP/1.1" 200 159
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:55:01 +0530] "GET /Web-development/db_to_json.jsp HTTP/1.1" 200 209
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:55:03 +0530] "POST /Web-development/empdata HTTP/1.1" 404 1044
+127.0.0.1 - - [16/Mar/2024:20:57:42 +0530] "GET / HTTP/1.1" 404 998
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:57:43 +0530] "GET /Book-order/home.jsp HTTP/1.1" 200 820
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:57:43 +0530] "GET /Book-order/js/jQuery.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:58:06 +0530] "GET /Web-development/db_to_json.jsp HTTP/1.1" 200 209
+0:0:0:0:0:0:0:1 - - [16/Mar/2024:20:58:07 +0530] "POST /Web-development/empdata HTTP/1.1" 200 157

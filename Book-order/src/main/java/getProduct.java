@@ -58,14 +58,14 @@ public class getProduct extends HttpServlet {
 			Connection con = DriverManager.getConnection(url, "root", "");
 
 			PreparedStatement stmt = con.prepareStatement(
-					"select * from product_master where prodName='" + request.getParameter("ProdName") + "'");
+					"select * from product_master where prodname='" + request.getParameter("prodname") + "'");
 			ResultSet rs = stmt.executeQuery();
 			JSONArray jarr = new JSONArray();
 			ResultSetMetaData rsmd = rs.getMetaData();
 			while (rs.next()) {
 				int col = rsmd.getColumnCount();
 				JSONObject obj = new JSONObject();
-				for (int i = 1; i < col; i++) {
+				for (int i = 1; i <= col; i++) {
 					String colname = rsmd.getColumnName(i);
 					obj.put(colname, rs.getObject(i));
 
