@@ -15,7 +15,7 @@ drop table order_master;
 INSERT INTO order_book.product_master (prodid, prodname, prodrate, prodqty) VALUES
 (1, 'To Kill a Mockingbird', 25, 100),
 (2, 'The Great Gatsby', 30, 80),
-(3, '1984', 20, 120),
+(3, 'Frankenstein', 20, 120),
 (4, 'Pride and Prejudice', 28, 90),
 (5, 'The Catcher in the Rye', 22, 110);
 
