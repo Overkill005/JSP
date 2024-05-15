@@ -8,6 +8,7 @@ create database order_book;
 CREATE TABLE order_book.product_master (prodid INT NOT NULL , prodname VARCHAR(50) NOT NULL , prodrate INT NOT NULL , prodqty INT NOT NULL ) ENGINE = InnoDB;
 drop table product_master;
 
+
 CREATE TABLE order_book.order_master (orderid INT NOT NULL AUTO_INCREMENT , orderdate DATE NOT NULL DEFAULT CURRENT_TIMESTAMP , prodid INT NOT NULL , prodrate INT NOT NULL , orderqty INT NOT NULL , ordervalue INT NOT NULL , PRIMARY KEY (orderid)) ENGINE = InnoDB;
 drop table order_master;
 

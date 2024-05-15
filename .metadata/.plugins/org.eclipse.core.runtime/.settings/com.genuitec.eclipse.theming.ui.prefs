@@ -3,7 +3,13 @@ approved.defs.file.last.changed.time=1693315978000
 configurationInstallLocation=/C\:/Users/sansk/eclipse/jee-2023-122/eclipse/
 eclipse.preferences.version=1
 iconcolormode=primary
+<<<<<<< Updated upstream
 last.download.attempt.time=1711067845558
 lastConfiguration=1710175433950
+=======
+iconreplacement=false
+last.download.attempt.time=1711077996436
+lastConfiguration=1711077987781
+>>>>>>> Stashed changes
 newinstall=true
 workbench.theme=Dark Gray
